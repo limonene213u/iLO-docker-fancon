@@ -1,0 +1,10 @@
+version: '3.8'
+services:
+  ilo-fans-controller:
+    build: .
+    ports:
+      - "${PORT}:80"
+    environment:
+      - ILO_HOST=${IP}
+      - ILO_USERNAME=${USER}
+      - ILO_PASSWORD=${PASS}
